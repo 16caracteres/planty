@@ -14,3 +14,14 @@ Text Domain: planty
 Tags: 
 */
 
+.btn_commander a {
+    color: #FFF;
+    padding: 30px 61px;
+    background-color: #DC9F96;
+}
+
+.btn_commander a:hover {
+    color: #FFF;
+    padding: 30px 61px;
+    background-color: #C02E44;
+}
