@@ -50,10 +50,78 @@ var(--wp--preset--color--custom-rouge-rose)
 
 */
 
+/* HEADER */
+
+nav a:hover {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.nav-commander {
+    display: none!important;
+}
+
+.btn-commander a {
+    font-size: 16px;
+    font-weight: 700;
+}
+
 .btn-commander a:hover{
     background-color: var(--wp--preset--color--custom-rouge-rose)!important; 
 }
 
+/* FOOTER */
+
 footer a {
     text-decoration: none!important;
+}
+
+/* ------------------------------------------ */
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1022px) {
+    .hide-btn-commander {
+        display: none!important;
+    }
+    .nav-commander {
+        display: inline!important;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .spacing-logo-site {
+        padding-left: 25px!important;
+        padding-right: 25px!important;
+    }
+    #spacing-nav-site {
+        padding-left: 25px!important;
+        padding-right: 25px!important;
+        gap: 0;
+    }
+}
+
+/* ---------- AFFICHAGE DU MENU HAMBURGER ------------ */
+
+/* Change the WordPress default css to a 1023px media query */
+@media (min-width: 1023px) {
+    .wp-block-navigation__responsive-container-open:not(.always-shown) {
+        display: none !important;
+    }
+    .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+        display: block !important;
+        width: 100%;
+        position: relative;
+        z-index: auto;
+        background-color: inherit;
+    }
+}
+/* Remove the WordPress default for 600px */
+@media (min-width: 600px) {
+    .wp-block-navigation__responsive-container-open:not(.always-shown) {
+        display: flex;
+    }
+    .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+        display: none;
+    }
 }
