@@ -14,14 +14,46 @@ Text Domain: planty
 Tags: 
 */
 
-.btn_commander a {
-    color: #FFF;
-    padding: 30px 61px;
-    background-color: #DC9F96;
+/*
+Couleurs 
+"color": "#dc9f96",
+"name": "Rose",
+var(--wp--preset--color--custom-rose)
+		
+"color": "#3b8e46",
+"name": "Vert",
+var(--wp--preset--color--custom-vert)
+
+"color": "#000",
+"name": "Noir",
+var(--wp--preset--color--custom-noir)
+
+"color": "#ffffff",
+"name": "Blanc",
+var(--wp--preset--color--custom-blanc)
+
+"color": "#ece2da",
+"name": "Beige Rose",
+var(--wp--preset--color--custom-beige-rose)
+
+"color": "#d2776a",
+"name": "Rose Rouge Ocre",
+var(--wp--preset--color--custom-rose-rouge-ocre)
+
+"color": "#326238",
+"name": "Vert sombre",
+var(--wp--preset--color--custom-vert-sombre)
+
+"color": "#c02e44",
+"name": "Rouge Rose",
+var(--wp--preset--color--custom-rouge-rose)
+
+*/
+
+.btn-commander a:hover{
+    background-color: var(--wp--preset--color--custom-rouge-rose)!important; 
 }
 
-.btn_commander a:hover {
-    color: #FFF;
-    padding: 30px 61px;
-    background-color: #C02E44;
+footer a {
+    text-decoration: none!important;
 }
