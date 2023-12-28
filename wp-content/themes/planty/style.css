@@ -87,6 +87,9 @@ footer a {
     .nav-commander {
         display: inline!important;
     }
+    h1 {
+        font-size: 1.5rem!important;
+    }
 }
 
 @media screen and (max-width: 375px) {
