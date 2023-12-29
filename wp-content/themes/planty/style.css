@@ -66,7 +66,11 @@ nav a:hover {
     font-weight: 700;
 }
 
-.btn-commander a:hover{
+.btn-commander .wp-block-button__link, .wp-block-button__link {
+    transition: 0.3s;
+}
+
+.btn-commander .wp-block-button__link:hover, .wp-block-button__link:hover{
     background-color: var(--wp--preset--color--custom-rouge-rose)!important; 
 }
 
@@ -75,6 +79,20 @@ nav a:hover {
 footer a {
     text-decoration: none!important;
 }
+
+/* DECORATION */
+
+.section-relative {
+    position: relative;
+}
+
+.feuille-deco-absolute {
+    position: absolute;
+    top: 10vh;
+    left: 24vw;
+    Z-index:-1;
+}
+
 
 /* ------------------------------------------ */
 
@@ -89,6 +107,11 @@ footer a {
     }
     h1 {
         font-size: 1.5rem!important;
+    }
+    /*Ajout de marges sur les côtés de paragraphe en version mobile*/
+    body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+        margin-left: 10px!important;
+        margin-right: 10px!important;
     }
 }
 
