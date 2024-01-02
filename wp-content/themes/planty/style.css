@@ -80,19 +80,24 @@ footer a {
     text-decoration: none!important;
 }
 
-/* DECORATION */
+/* PAGES */
 
 .section-relative {
     position: relative;
 }
 
-.feuille-deco-absolute {
+.fleur-deco-absolute {
     position: absolute;
     top: 10vh;
     left: 24vw;
     Z-index:-1;
 }
 
+.feuille-deco-absolute {
+    position: absolute;
+    right: 10vw;
+    bottom: 0;
+}
 
 /* ------------------------------------------ */
 
@@ -112,6 +117,11 @@ footer a {
     body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
         margin-left: 10px!important;
         margin-right: 10px!important;
+        max-width: 100%!important;
+    }
+    .section-titre-paragraphe {
+        padding-left: 20px!important;
+        padding-right: 20px!important;
     }
 }
 
