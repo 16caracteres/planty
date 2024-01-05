@@ -52,9 +52,26 @@ var(--wp--preset--color--custom-rouge-rose)
 
 /* GENERAL */
 
-*:focus {
+a {
+    text-decoration: none;
+}
+
+
+*:focus { /* retirer bordure des champs de formulaires */
     outline: none;
 }
+
+/* retirer les flèches sur les champs "number" */
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0 !important;
+}
+  
+input[type="number"] {
+    -moz-appearance: textfield !important;
+}
+
+
 
 /* HEADER */
 
@@ -72,18 +89,12 @@ nav a:hover {
     font-weight: 700;
 }
 
-.btn-commander .wp-block-button__link, .wp-block-button__link {
+.btn-commander .wp-block-button__link, .wp-block-button__link, .bouton-commander input[type="submit"] {
     transition: 0.3s;
 }
 
-.btn-commander .wp-block-button__link:hover, .wp-block-button__link:hover{
+.btn-commander .wp-block-button__link:hover, .wp-block-button__link:hover, .bouton-commander input[type="submit"]:hover {
     background-color: var(--wp--preset--color--custom-rouge-rose)!important; 
-}
-
-/* FOOTER */
-
-footer a {
-    text-decoration: none!important;
 }
 
 /* PAGES */
@@ -110,6 +121,51 @@ footer a {
     position: absolute;
     right: 10vw;
     bottom: 0;
+}
+
+.flavour-paragraph {
+    width: 193px!important;
+}
+
+/* CONTACT et FORMULAIRES */
+.quantity-form {
+    height: 56px;
+    width: 39px;
+    text-align: center;
+    border: none;
+}
+
+.formulaire-commande {
+    display: flex;
+    justify-content: space-between;
+}
+
+.formulaire-commande h3 {
+    color: var(--wp--preset--color--custom-blanc);
+}
+
+.formulaire-commande input {
+    border: none;
+    height: 70px;
+    border-radius: 7px;
+}
+
+.bouton-commander {
+    text-align: center;
+}
+
+.bouton-commander input[type="submit"] {
+    color: var(--wp--preset--color--custom-blanc);
+    background-color: var(--wp--preset--color--custom-rose);
+    border: none;
+    padding: 15px 55px;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: initial;
+}
+
+.bouton-commander .wpcf7-spinner {
+    display: none;
 }
 
 /* ------------------------------------------ */
