@@ -50,6 +50,12 @@ var(--wp--preset--color--custom-rouge-rose)
 
 */
 
+/* GENERAL */
+
+*:focus {
+    outline: none;
+}
+
 /* HEADER */
 
 nav a:hover {
@@ -82,7 +88,7 @@ footer a {
 
 /* PAGES */
 
-.section-relative {
+.section-relative, .column-relative {
     position: relative;
 }
 
@@ -90,6 +96,13 @@ footer a {
     position: absolute;
     top: 10vh;
     left: 24vw;
+    Z-index:-1;
+}
+
+.fleur-2-deco-absolute {
+    position: absolute;
+    bottom: 5vh;
+    left: -3vw;
     Z-index:-1;
 }
 
