@@ -128,6 +128,10 @@ nav a:hover {
 }
 
 /* CONTACT et FORMULAIRES */
+.no-padding {
+    padding: 0!important;
+}
+
 .quantity-form {
     height: 56px;
     width: 39px;
@@ -144,28 +148,66 @@ nav a:hover {
     color: var(--wp--preset--color--custom-blanc);
 }
 
+.formulaire-commande p {
+    margin: 30px 0 0 0;
+}
+
 .formulaire-commande input {
     border: none;
     height: 70px;
     border-radius: 7px;
+    margin-top: 13px;
+    padding: 0 10px;
+}
+
+.separateur-formulaire {
+    border-right: 0.01em solid;
+    width: 50%;
 }
 
 .bouton-commander {
     text-align: center;
+    margin-top: 45px;
 }
 
 .bouton-commander input[type="submit"] {
     color: var(--wp--preset--color--custom-blanc);
     background-color: var(--wp--preset--color--custom-rose);
     border: none;
-    padding: 15px 55px;
+    padding: 19px 57px;
     border-radius: 5px;
     font-family: inherit;
-    font-size: initial;
 }
 
 .bouton-commander .wpcf7-spinner {
     display: none;
+}
+
+.wp-block-separator {
+  border: 0.01em solid!important;
+}
+
+.wpcf7-not-valid-tip {
+    padding: 4px;
+    font-size: 0.8rem;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    background-color: var(--wp--preset--color--custom-rouge-rose);
+    color: var(--wp--preset--color--custom-blanc);
+    margin-top: -5px;
+}
+
+.wpcf7-response-output {
+    border: none;
+    background-color: var(--wp--preset--color--custom-beige-rose);
+    border-radius: 7px;
+    padding: 15px!important;
+    text-align: center;
+    color: var(--wp--preset--color--custom-rouge-rose);
+}
+
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output, .wpcf7 form.payment-required .wpcf7-response-output {
+    border: none!important;
 }
 
 /* ------------------------------------------ */
