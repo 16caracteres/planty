@@ -221,6 +221,9 @@ nav a:hover {
     .nav-commander {
         display: inline!important;
     }
+    .nav-admin {
+        display: none!important;
+    }
     h1 {
         font-size: 1.5rem!important;
     }
