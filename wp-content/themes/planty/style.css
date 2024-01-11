@@ -50,12 +50,15 @@ var(--wp--preset--color--custom-rouge-rose)
 
 */
 
-/* GENERAL */
+/* ------------------------- GENERAL ------------------------- */
 
 a {
     text-decoration: none;
 }
 
+.no-padding {
+    padding: 0!important;
+}
 
 *:focus { /* retirer bordure des champs de formulaires */
     outline: none;
@@ -71,9 +74,9 @@ input[type="number"] {
     -moz-appearance: textfield !important;
 }
 
+/*---------------------------------------------------------------------------*/
 
-
-/* HEADER */
+/* ------------------------- HEADER ------------------------- */
 
 nav a:hover {
     font-size: 13px;
@@ -97,28 +100,31 @@ nav a:hover {
     background-color: var(--wp--preset--color--custom-rouge-rose)!important; 
 }
 
-/* PAGES */
+/*---------------------------------------------------------------------------*/
+
+/* ------------------------- PAGES ------------------------- */
 
 .section-relative, .column-relative {
     position: relative;
 }
 
-.fleur-deco-absolute {
+.fleur-deco-absolute, .fleur-2-deco-absolute, .feuille-deco-absolute {
     position: absolute;
+}
+
+.fleur-deco-absolute {
     top: 10vh;
     left: 24vw;
     Z-index:-1;
 }
 
 .fleur-2-deco-absolute {
-    position: absolute;
     bottom: 5vh;
     left: -3vw;
     Z-index:-1;
 }
 
 .feuille-deco-absolute {
-    position: absolute;
     right: 10vw;
     bottom: 0;
 }
@@ -127,10 +133,9 @@ nav a:hover {
     width: 193px!important;
 }
 
-/* CONTACT et FORMULAIRES */
-.no-padding {
-    padding: 0!important;
-}
+/*---------------------------------------------------------------------------*/
+
+/* ------------------------- CONTACT et FORMULAIRES ------------------------- */
 
 .quantity-form {
     height: 56px;
@@ -142,6 +147,8 @@ nav a:hover {
 .formulaire-commande {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .formulaire-commande h3 {
@@ -160,9 +167,12 @@ nav a:hover {
     padding: 0 10px;
 }
 
+.vos-informations-form {
+    padding-right: 61px;
+}
+
 .separateur-formulaire {
     border-right: 0.01em solid;
-    width: 50%;
 }
 
 .bouton-commander {
@@ -210,11 +220,13 @@ nav a:hover {
     border: none!important;
 }
 
-/* ------------------------------------------ */
+/*---------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------*/
 
-/* RESPONSIVE */
+/* ------------------------- RESPONSIVE ------------------------- */
 
 @media screen and (max-width: 1022px) {
+    /* GÉNERAL */
     .hide-btn-commander {
         display: none!important;
     }
@@ -227,6 +239,9 @@ nav a:hover {
     h1 {
         font-size: 1.5rem!important;
     }
+    h2, h3 {
+        font-size: 1.25rem!important;
+    }
     /*Ajout de marges sur les côtés de paragraphe en version mobile*/
     body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
         margin-left: 10px!important;
@@ -237,21 +252,84 @@ nav a:hover {
         padding-left: 20px!important;
         padding-right: 20px!important;
     }
+    /* HOME PAGE */
+    .home-flavour-banner h2 {
+        font-size : 2rem!important;
+    }
+    /* PAGE Nous rencontrer */
+    .section-team-title {
+        padding-top: 100px!important;
+    }
+    .section-team-column {
+        padding-bottom: 50px!important;
+    }    
+    .members-team-row {
+        gap: 35px!important;
+    }
+    .fleur-deco-absolute, .fleur-2-deco-absolute, .feuille-deco-absolute {
+        display: none;
+    }
+    /* PAGE Commander */
+    .section-flavour-row {
+        flex-wrap: wrap!important;
+        justify-content: center!important;
+    }
+    .formulaire-commande {
+        justify-content: space-around;
+        gap: 20px;
+    }
+    .vos-informations-form {
+        padding-right: 0;
+    }
+    .separateur-formulaire {
+        border:none;
+    }
+
+}
+
+@media screen and (max-width: 869px) {
+    /* PAGE Commander*/
+    .section-flavour h3 {
+        text-align: center!important;
+    }
 }
 
 @media screen and (max-width: 375px) {
     .spacing-logo-site {
-        padding-left: 25px!important;
-        padding-right: 25px!important;
+        padding-left: 15px!important;
+        padding-right: 15px!important;
     }
     #spacing-nav-site {
-        padding-left: 25px!important;
-        padding-right: 25px!important;
+        padding-left: 15px!important;
+        padding-right: 15px!important;
         gap: 0;
+    }
+    /* HOME PAGE */
+    .testimonial-single {
+        flex-wrap: wrap!important;
+    }
+    .testimonial-single figure {
+        display: none;
+    }
+    .testimonial-text {
+        align-items: center!important;
+        text-align: center;
+    }
+    /* PAGE Commander */
+    .formulaire-commande input {
+        padding: 0;
+        width: 100%;
     }
 }
 
-/* ---------- AFFICHAGE DU MENU HAMBURGER ------------ */
+/* ------------------------- AFFICHAGE DU MENU HAMBURGER ------------------------- */
+
+/* Centrage vertical */
+@media (max-width:1022px) {
+    .wp-block-navigation__responsive-container-content {
+    padding-top: 45vh!important;
+    }
+}
 
 /* Change the WordPress default css to a 1023px media query */
 @media (min-width: 1023px) {
