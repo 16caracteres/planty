@@ -64,6 +64,10 @@ a {
     outline: none;
 }
 
+textarea {
+    resize: none;
+}
+
 /* retirer les flèches sur les champs "number" */
 input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none !important;
@@ -92,12 +96,13 @@ nav a:hover {
     font-weight: 700;
 }
 
-.btn-commander .wp-block-button__link, .wp-block-button__link, .bouton-commander input[type="submit"] {
+.btn-commander .wp-block-button__link, .wp-block-button__link, .bouton-commander input[type="submit"], .bouton-envoyer input[type="submit"] {
     transition: 0.3s;
 }
 
-.btn-commander .wp-block-button__link:hover, .wp-block-button__link:hover, .bouton-commander input[type="submit"]:hover {
-    background-color: var(--wp--preset--color--custom-rouge-rose)!important; 
+.btn-commander .wp-block-button__link:hover, .wp-block-button__link:hover, .bouton-commander input[type="submit"]:hover, .bouton-envoyer input[type="submit"]:hover {
+    background-color: var(--wp--preset--color--custom-rouge-rose)!important;
+    cursor: pointer;
 }
 
 /*---------------------------------------------------------------------------*/
@@ -159,12 +164,24 @@ nav a:hover {
     margin: 30px 0 0 0;
 }
 
-.formulaire-commande input {
+.formulaire-commande input, .formulaire-contact input {
     border: none;
     height: 70px;
     border-radius: 7px;
     margin-top: 13px;
     padding: 0 10px;
+}
+
+.formulaire-contact textarea {
+    border: none;
+    border-radius: 7px;
+    margin-top: 13px;
+    padding-top: 10px;
+    width: 100%;
+}
+
+.required-field {
+    color : var(--wp--preset--color--custom-rose);
 }
 
 .vos-informations-form {
@@ -175,12 +192,12 @@ nav a:hover {
     border-right: 0.01em solid;
 }
 
-.bouton-commander {
+.bouton-commander, .bouton-envoyer {
     text-align: center;
     margin-top: 45px;
 }
 
-.bouton-commander input[type="submit"] {
+.bouton-commander input[type="submit"], .bouton-envoyer input[type="submit"] {
     color: var(--wp--preset--color--custom-blanc);
     background-color: var(--wp--preset--color--custom-rose);
     border: none;
@@ -189,7 +206,7 @@ nav a:hover {
     font-family: inherit;
 }
 
-.bouton-commander .wpcf7-spinner {
+.bouton-commander .wpcf7-spinner, .bouton-envoyer .wpcf7-spinner {
     display: none;
 }
 

@@ -22,7 +22,8 @@
 }
 add_filter('wp_nav_menu_items', 'display_admin', 10, 2);*/
 
-function remove_admin_item(){
+
+/*function remove_admin_item(){
 	if (!is_user_logged_in()) {?>
 	<script>
 		 document.querySelectorAll('.wp-block-navigation-item')[2].remove()
@@ -30,3 +31,17 @@ function remove_admin_item(){
 <?php }
 }
 add_action('wp_footer', 'remove_admin_item');
+*/
+
+function hook_admin_css() {
+    if (! is_user_logged_in()) {
+    ?>
+        <style>
+            .admin_access {
+              display: none !important;
+            }';
+        </style>
+    <?php
+    }
+}
+add_action('wp_head', 'hook_admin_css');
