@@ -56,11 +56,8 @@ a {
     text-decoration: none;
 }
 
-.no-padding {
-    padding: 0!important;
-}
-
-*:focus { /* retirer bordure des champs de formulaires */
+/* retirer bordure des champs de formulaires */
+*:focus { 
     outline: none;
 }
 
@@ -73,9 +70,13 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     -webkit-appearance: none !important;
     margin: 0 !important;
 }
-  
+
 input[type="number"] {
     -moz-appearance: textfield !important;
+}
+
+.no-padding {
+    padding: 0!important;
 }
 
 /*---------------------------------------------------------------------------*/
@@ -118,8 +119,8 @@ nav a:hover {
 }
 
 .fleur-deco-absolute {
-    top: 10vh;
     left: 24vw;
+    top: 10vh;
     Z-index:-1;
 }
 
@@ -130,8 +131,8 @@ nav a:hover {
 }
 
 .feuille-deco-absolute {
-    right: 10vw;
     bottom: 0;
+    right: 10vw;
 }
 
 .flavour-paragraph {
@@ -143,17 +144,17 @@ nav a:hover {
 /* ------------------------- CONTACT et FORMULAIRES ------------------------- */
 
 .quantity-form {
+    border: none;
     height: 56px;
     width: 39px;
     text-align: center;
-    border: none;
 }
 
 .formulaire-commande {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    align-items: center;
 }
 
 .formulaire-commande h3 {
@@ -165,16 +166,16 @@ nav a:hover {
 }
 
 .formulaire-commande input, .formulaire-contact input {
+    border-radius: 7px;
     border: none;
     height: 70px;
-    border-radius: 7px;
     margin-top: 13px;
     padding: 0 10px;
 }
 
 .formulaire-contact textarea {
-    border: none;
     border-radius: 7px;
+    border: none;
     margin-top: 13px;
     padding-top: 10px;
     width: 100%;
@@ -193,17 +194,17 @@ nav a:hover {
 }
 
 .bouton-commander, .bouton-envoyer {
-    text-align: center;
     margin-top: 45px;
+    text-align: center;
 }
 
 .bouton-commander input[type="submit"], .bouton-envoyer input[type="submit"] {
-    color: var(--wp--preset--color--custom-blanc);
     background-color: var(--wp--preset--color--custom-rose);
-    border: none;
-    padding: 19px 57px;
     border-radius: 5px;
+    border: none;
+    color: var(--wp--preset--color--custom-blanc);
     font-family: inherit;
+    padding: 19px 57px;
 }
 
 .bouton-commander .wpcf7-spinner, .bouton-envoyer .wpcf7-spinner {
@@ -215,22 +216,22 @@ nav a:hover {
 }
 
 .wpcf7-not-valid-tip {
-    padding: 4px;
-    font-size: 0.8rem;
-    border-bottom-right-radius: 7px;
-    border-bottom-left-radius: 7px;
     background-color: var(--wp--preset--color--custom-rouge-rose);
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
     color: var(--wp--preset--color--custom-blanc);
+    font-size: 0.8rem;
     margin-top: -5px;
+    padding: 4px;
 }
 
 .wpcf7-response-output {
-    border: none;
     background-color: var(--wp--preset--color--custom-beige-rose);
     border-radius: 7px;
+    border: none;
+    color: var(--wp--preset--color--custom-rouge-rose);
     padding: 15px!important;
     text-align: center;
-    color: var(--wp--preset--color--custom-rouge-rose);
 }
 
 .wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output, .wpcf7 form.payment-required .wpcf7-response-output {
@@ -317,9 +318,9 @@ nav a:hover {
         padding-right: 15px!important;
     }
     #spacing-nav-site {
+        gap: 0;
         padding-left: 15px!important;
         padding-right: 15px!important;
-        gap: 0;
     }
     /* HOME PAGE */
     .testimonial-single {
@@ -354,11 +355,11 @@ nav a:hover {
         display: none !important;
     }
     .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
-        display: block !important;
-        width: 100%;
-        position: relative;
-        z-index: auto;
         background-color: inherit;
+        display: block !important;
+        position: relative;
+        width: 100%;
+        z-index: auto;
     }
 }
 /* Remove the WordPress default for 600px */
