@@ -14,42 +14,6 @@ Text Domain: planty
 Tags: 
 */
 
-/*
-Couleurs 
-"color": "#dc9f96",
-"name": "Rose",
-var(--wp--preset--color--custom-rose)
-		
-"color": "#3b8e46",
-"name": "Vert",
-var(--wp--preset--color--custom-vert)
-
-"color": "#000",
-"name": "Noir",
-var(--wp--preset--color--custom-noir)
-
-"color": "#ffffff",
-"name": "Blanc",
-var(--wp--preset--color--custom-blanc)
-
-"color": "#ece2da",
-"name": "Beige Rose",
-var(--wp--preset--color--custom-beige-rose)
-
-"color": "#d2776a",
-"name": "Rose Rouge Ocre",
-var(--wp--preset--color--custom-rose-rouge-ocre)
-
-"color": "#326238",
-"name": "Vert sombre",
-var(--wp--preset--color--custom-vert-sombre)
-
-"color": "#c02e44",
-"name": "Rouge Rose",
-var(--wp--preset--color--custom-rouge-rose)
-
-*/
-
 /* ------------------------- GENERAL ------------------------- */
 
 a {
@@ -114,11 +78,11 @@ nav a:hover {
     position: relative;
 }
 
-.fleur-deco-absolute, .fleur-2-deco-absolute, .feuille-deco-absolute {
+.fleur-deco-absolute, .fleur-2-deco-absolute, .feuille-deco-absolute, #fleur-deco-absolute {
     position: absolute;
 }
 
-.fleur-deco-absolute {
+.fleur-deco-absolute, #fleur-deco-absolute {
     left: 24vw;
     top: 10vh;
     Z-index:-1;
@@ -148,6 +112,11 @@ nav a:hover {
     height: 56px;
     width: 39px;
     text-align: center;
+}
+
+.formulaire-contact {
+    display:flex;
+    flex-direction: column;
 }
 
 .formulaire-commande {
@@ -228,14 +197,28 @@ nav a:hover {
 .wpcf7-response-output {
     background-color: var(--wp--preset--color--custom-beige-rose);
     border-radius: 7px;
-    border: none;
-    color: var(--wp--preset--color--custom-rouge-rose);
+    border-color: var(--wp--preset--color--custom-vert);
+    color: var(--wp--preset--color--custom-vert);
     padding: 15px!important;
     text-align: center;
 }
 
-.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output, .wpcf7 form.payment-required .wpcf7-response-output {
-    border: none!important;
+.column-relative .wpcf7 form.invalid {
+    display: none!important;
+}
+
+.column-relative .wpcf7-response-output {
+    margin: auto!important;
+    width: 250px;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output, .wpcf7 form.payment-required {
+    background-color: var(--wp--preset--color--custom-beige-rose);
+    border-radius: 7px;
+    border-color: var(--wp--preset--color--custom-rouge-rose);
+    color: var(--wp--preset--color--custom-rouge-rose);
+    padding: 15px!important;
+    text-align: center;
 }
 
 /*---------------------------------------------------------------------------*/
@@ -302,7 +285,10 @@ nav a:hover {
     .separateur-formulaire {
         border:none;
     }
-
+    /* FORMULAIRE CF7 */
+    .wpcf7 {
+        width: auto;
+    }
 }
 
 @media screen and (max-width: 869px) {
